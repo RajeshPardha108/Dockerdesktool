@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2 Coming Soon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Orbitron', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            background-image: url('https://www.example.com/hacking-background.jpg'); /* Replace with a valid URL */
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+        .container {
+            text-align: center;
+        }
+        .message {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: glow 1.5s ease-in-out infinite alternate, color-change 3s infinite;
+        }
+        .sub-message {
+            font-size: 2em;
+            animation: glow 1.5s ease-in-out infinite alternate, color-change 3s infinite;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+            }
+        }
+        @keyframes color-change {
+            0% {
+                color: #00ff00;
+            }
+            25% {
+                color: #ff0000;
+            }
+            50% {
+                color: #0000ff;
+            }
+            75% {
+                color: #ffff00;
+            }
+            100% {
+                color: #00ff00;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="message">Part 2 Coming Soon</div>
+        <div class="sub-message">Stay Tuned</div>
+    </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 #MAINTAINER - Identifies the maintainer of the dockerfile.
-MAINTAINER ian.miell@gmail.com
+MAINTAINERRajesh
 
 #RUN - Runs a command in the container
 RUN apt-get update && apt-get install -y python
@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y python
 COPY index.html /var/www/html/index.html
 
 # Create a script to keep the container running
-RUN echo '#!/bin/bash\nwhile true; do sleep 1000; done' > /keep_alive.sh && chmod +x /keep_alive.sh
+RUN echo '#!/bin/bash\npython -m http.server 80 --directory /var/www/html' > /start_server.sh && chmod +x /start_server.sh
 
 #EXPOSE - Expose the port number
 EXPOSE 80
 
 #CMD - Identifies the command that should be used by default when running the image as a container.
-CMD ["bash", "/keep_alive.sh"]
+CMD ["bash", "/start_server.sh"]

@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 #MAINTAINER - Identifies the maintainer of the dockerfile.
-MAINTAINERRajesh
+MAINTAINER Rajesh
 
 #RUN - Runs a command in the container
 RUN apt-get update && apt-get install -y python

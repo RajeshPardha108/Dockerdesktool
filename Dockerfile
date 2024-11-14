@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 #MAINTAINER - Identifies the maintainer of the dockerfile.
-MAINTAINER Rajesh
+MAINTAINER rajesh
 
 #RUN - Runs a command in the container
 RUN apt-get update && apt-get install -y python3
@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y python3
 COPY index.html /var/www/html/index.html
 
 # Create a script to keep the container running and start the web server
-RUN echo '#!/bin/bash\npython3 -m http.server 80 --directory /var/www/html' > /start_server.sh && chmod +x /start_server.sh
+RUN echo '#!/bin/bash\ncd /var/www/html\npython3 -m http.server 80' > /start_server.sh && chmod +x /start_server.sh
 
 #EXPOSE - Expose the port number
 EXPOSE 80
